@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UGASS SITE</title>
 
+     <!-- Remix icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css">
+
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,11 +17,44 @@
     <header id="header">
         <a href="index.html"><img src="Images/logo.jpeg" alt="" class="logo"></a>
 
+
+        <!-- Menu -->
         <div class="menu">
             <ul id="navbar">
                 <li><a class="active" href="Index.html">Home</a></li>
-                <li><a href="Course.html">Courses</a></li>
-                <li><a href="Faculty.html">Faculty</a></li>
+
+                <!-- Dropdown 1 -->
+                <li class="dropdown_item">
+                    <div class="nav_link">
+                        <a href="Course.html">Courses</a> <i class="ri-arrow-down-s-line dropdown_arrow"></i>
+                    </div>
+
+                    <ul class="dropdown_menu">
+                        <li><a href="#" class="dropdown_link">UnderGrad</a></li>
+                        <li><a href="#" class="dropdown_link">Degree</a></li>
+                        <li><a href="#" class="dropdown_link">Post-Grad</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown 2 -->
+                <li class="dropdown_item">
+                    <div class="nav_link">
+                        <a href="Faculty.html">Faculty</a> <i class="ri-arrow-down-s-line dropdown_arrow"></i>
+                    </div>
+
+                    <ul class="dropdown_menu">
+                        <li>
+                            <a href="#" class="dropdown_link">Staff</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown_link">Executives</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown_link">Committees</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li><a href="Blog.html">Blog</a></li>
                 <li><a href="About.html">About</a></li>
                 <button class="red">Contact Us</button>

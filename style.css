@@ -100,8 +100,13 @@ span{
 
 .home-hero{
     background-image: linear-gradient(
-        rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/Students.jpg);;
+        rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/Students.jpg);
     height: 90vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #hero {
@@ -800,5 +805,60 @@ footer .copyright{
 .slider-img.active details p,
 .slider-img.active .details h2{
 display: block;
+}
+
+
+
+/* Dropdown  */
+.dropdown_item{
+    cursor: pointer;
+}
+
+.dropdown_arrow{
+    font-size: 1.25rem;
+    font-weight: initial;
+    transition: transform .4s;
+}
+
+.dropdown_link{
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: var(--white-color);
+    background-color: var(--black-color-light);
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+    font-weight: var(--font-semi-bold);
+    transition: background-color .3s;
+}
+
+
+.dropdown_link i{
+    font-size: 1.25rem;
+    font-weight: initial;
+}
+
+.dropdown_link:hover,
+.dropdown_sublink:hover{
+    background-color: var(--black-color);
+}
+
+.dropdown_menu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-out;
+    position: column;
+}
+
+/* Show dropdown menu & submenu */
+.dropdown_item:hover .dropdown_menu,
+.dropdown_subitem:hover >.dropdown_submenu{
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+}
+
+
+/* ROTATE DROPDOWN ICON */
+.dropdown_item:hover .dropdown_arrow{
+    transform: rotate(180deg);
 }
 

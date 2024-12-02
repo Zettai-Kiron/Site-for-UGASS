@@ -40,18 +40,20 @@ span{
     justify-content: space-between;
     padding:  20px 80px;
     background: #fff;
+    position: absolute;
+    width: 100%;
 }
 
 #header .logo{
     width: 200px;
 }
 
-.menu{
+nav{
     flex: 1;
     text-align: right;
 }
 
-.menu #navbar li{
+nav ul li{
     display: inline-block;
     list-style: none;
     padding: 0 20px;
@@ -94,6 +96,46 @@ span{
 #close {
     display: none;
 }
+
+/* For Dropdown */
+header ul li ul{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    display: none;
+}
+
+header ul li ul:hover{
+    color: goldenrod;
+}
+
+header ul li ul li a{
+    color: #fff;
+    font-size: 4.5em;
+}
+
+header ul li:hover > ul{
+    display: block;
+}
+
+header ul li ul li{
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #fff;
+    background-color: rgb(7, 22, 110);
+
+} 
+
+header ul li ul li:hover{
+    background-color: goldenrod;
+}
+
+header #navbar .dropdown_item .dropdown_menu a{
+    color: #fff;
+}
+
 
 
 /* Hero Page */
@@ -810,7 +852,7 @@ display: block;
 
 
 /* Dropdown  */
-.dropdown_item{
+/* .dropdown_item{
     cursor: pointer;
 }
 
@@ -850,15 +892,15 @@ display: block;
 }
 
 /* Show dropdown menu & submenu */
-.dropdown_item:hover .dropdown_menu,
+/* .dropdown_item:hover .dropdown_menu,
 .dropdown_subitem:hover >.dropdown_submenu{
     max-height: 1000px;
     transition: max-height .4s ease-in;
-}
+} */
 
 
 /* ROTATE DROPDOWN ICON */
-.dropdown_item:hover .dropdown_arrow{
+/* .dropdown_item:hover .dropdown_arrow{
     transform: rotate(180deg);
-}
-
+} */ */
+ 

@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 button{
@@ -88,7 +89,7 @@ nav ul li{
     width: 100%;
 }
 
-#mobile {
+.mobile {
     display: none;
     align-items: center;
 }
@@ -98,37 +99,34 @@ nav ul li{
 }
 
 /* For Dropdown */
-header ul li ul{
+.dropdown_menu{ 
     position: absolute;
     left: 0;
-    width: 100px;
+    width: 150px;
     display: none;
 }
 
-header ul li ul:hover{
+.dropdown_menu:hover{
     color: goldenrod;
 }
 
-header ul li ul li a{
-    color: #fff;
-    font-size: 4.5em;
-}
-
-header ul li:hover > ul{
+.dropdown_item:hover > ul{
     display: block;
 }
 
-header ul li ul li{
+.dropdown_menu  li{
     position: relative;
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 20px;
     color: #fff;
     background-color: rgb(7, 22, 110);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
-header ul li ul li:hover{
+.dropdown_menu li:hover{
     background-color: goldenrod;
 }
 
@@ -136,11 +134,16 @@ header #navbar .dropdown_item .dropdown_menu a{
     color: #fff;
 }
 
+/* ROTATE DROPDOWN ICON */
+.dropdown_item:hover .dropdown_arrow{
+    transform: rotate(180deg);
+} 
+
 
 
 /* Hero Page */
 
-.home-hero{
+#hero{
     background-image: linear-gradient(
         rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/Students.jpg);
     height: 90vh;
